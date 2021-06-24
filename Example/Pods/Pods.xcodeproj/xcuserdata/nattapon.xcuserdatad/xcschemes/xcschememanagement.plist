@@ -12,7 +12,7 @@
 		<key>Pods-SharpSegmentControlSwift_Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>SharpSegmentControlSwift.xcscheme</key>
 		<dict>

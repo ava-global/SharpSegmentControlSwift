@@ -32,10 +32,11 @@ class SharpButtonTest: XCTestCase {
     }
 
     func testInit() {
-        let btn = SharpButton(.init(x: 0,
-                                    y: 0,
-                                    width: 100,
-                                    height: 30),
+        let rect = CGRect(x: 0,
+                          y: 0,
+                          width: 100,
+                          height: 30)
+        let btn = SharpButton(rect,
                               fillShapeColor: .red,
                               radiusCornor: 10,
                               sharpSide: .none)
@@ -43,6 +44,21 @@ class SharpButtonTest: XCTestCase {
         XCTAssertEqual(btn.radiusCornor, 10)
         XCTAssertEqual(btn.fillShapeColor, UIColor.red)
         XCTAssertEqual(btn.sharpSide, SharpButton.SharpSide.none)
+        
+        let btn2 = SharpButton(rect,
+                              fillShapeColor: .blue,
+                              radiusCornor: 0,
+                              sharpSide: .leftBottom)
+        
+        XCTAssertEqual(btn2.radiusCornor, 0)
+        XCTAssertEqual(btn2.fillShapeColor, UIColor.blue)
+        XCTAssertEqual(btn2.sharpSide, SharpButton.SharpSide.leftBottom)
+        
+        let btn3 = SharpButton(rect)
+        
+        XCTAssertEqual(btn3.radiusCornor, 0)
+        XCTAssertEqual(btn3.fillShapeColor, UIColor.white)
+        XCTAssertEqual(btn3.sharpSide, SharpButton.SharpSide.none)
     }
     
 }
