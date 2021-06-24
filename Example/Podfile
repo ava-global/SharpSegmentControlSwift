@@ -1,0 +1,12 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'SharpSegmentControlSwift_Example' do
+  pod 'SharpSegmentControlSwift', :path => '../'
+
+  target 'SharpSegmentControlSwift_Tests' do
+    inherit! :search_paths
+
+  end
+end
