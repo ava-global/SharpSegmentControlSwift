@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'SharpSegmentControlSwift/Classes/**/*'  
-  s.framework = 'XCTest'
+#  s.framework = 'XCTest'
   
   # s.resource_bundles = {
   #   'SharpSegmentControlSwift' => ['SharpSegmentControlSwift/Assets/*.png']
