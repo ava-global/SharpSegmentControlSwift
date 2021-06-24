@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SharpButton: UIButton {
+public class SharpButton: UIButton {
     
     private var shapeLayers: [CALayer] = []
     private(set) var radiusCornor: CGFloat = 0
@@ -38,14 +38,14 @@ class SharpButton: UIButton {
         super.init(coder: coder)
     }
     
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         super.draw(rect)
        
         drawShape(rect,
                   kind: sharpSide)
     }
     
-    func setFillShapeColor(_ color: UIColor) {
+    public func setFillShapeColor(_ color: UIColor) {
         self.fillShapeColor = color
         
         removeShapeLayers()
@@ -58,7 +58,7 @@ class SharpButton: UIButton {
                   kind: sharpSide)
     }
     
-    func setSharpSide(_ side: SharpSide) {
+    public func setSharpSide(_ side: SharpSide) {
         self.sharpSide = side
         
         removeShapeLayers()
@@ -562,7 +562,7 @@ extension SharpButton {
 
 extension SharpButton {
     
-    enum SharpSide {
+    public enum SharpSide {
         case leftBottom
         case rightBottom
         case bothBottom

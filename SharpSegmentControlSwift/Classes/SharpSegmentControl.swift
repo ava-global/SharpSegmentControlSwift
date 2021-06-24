@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SharpSegmentControl: UIView {
+public class SharpSegmentControl: UIView {
     
     private(set) var horizontalStackView: UIStackView!
     private(set) var selectedIndex: Int = 0
@@ -120,7 +120,7 @@ class SharpSegmentControl: UIView {
         onTappedSegmentControl(segmentIndex)
     }
     
-    func selectSegmentIndex(_ index: Int) {
+    public func selectSegmentIndex(_ index: Int) {
         guard
             (index >= 0) &&
                 (index < segmentButtonCount) &&
