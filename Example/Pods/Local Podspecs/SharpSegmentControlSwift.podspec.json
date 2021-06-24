@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of SharpSegmentControlSwift.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/nattaponGolf123/SharpSegmentControlSwift",
+  "homepage": "https://github.com/ava-global/SharpSegmentControlSwift",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "nattaponGolf123": "taponpa@gmail.com"
   },
   "source": {
-    "git": "https://github.com/nattaponGolf123/SharpSegmentControlSwift.git",
+    "git": "https://github.com/ava-global/SharpSegmentControlSwift.git",
     "tag": "0.1.0"
   },
   "platforms": {

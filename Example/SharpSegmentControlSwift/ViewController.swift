@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SharpSegmentControlSwift
 
 class ViewController: UIViewController {
 
@@ -48,80 +49,80 @@ class ViewController: UIViewController {
 //        self.view.addSubview(segmentControl6)
         
         // 1 button
-        let rect = CGRect(x: 0,
-                          y: 100,
-                          width: UIScreen.main.bounds.width,
-                          height: 36)
-        let segmentControl = SharpSegmentControl(frame: rect,
-                                                 btnTitles: ["btn1"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
-                                                 radiusCornor: 10.0)
-        segmentControl.backgroundColor = .red
-        self.view.addSubview(segmentControl)
-        
-        // 2 button
-        let rect2 = CGRect(x: 0,
-                          y: 140,
-                          width: UIScreen.main.bounds.width,
-                          height: 36)
-        let segmentControl2 = SharpSegmentControl(frame: rect2,
-                                                 btnTitles: ["btn1",
-                                                             "btn2"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
-                                                 radiusCornor: 10.0)
-        segmentControl2.backgroundColor = .red
-        self.view.addSubview(segmentControl2)
-        
-        // 3 button
-        let rect3 = CGRect(x: 0,
-                          y: 180,
-                          width: UIScreen.main.bounds.width,
-                          height: 36)
-        let segmentControl3 = SharpSegmentControl(frame: rect3,
-                                                 btnTitles: ["btn1",
-                                                             "btn2",
-                                                             "btn3"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
-                                                 radiusCornor: 10.0)
-        segmentControl3.backgroundColor = .red
-        self.view.addSubview(segmentControl3)
-        
-        // 4 button
-        let rect4 = CGRect(x: 0,
-                          y: 220,
-                          width: UIScreen.main.bounds.width,
-                          height: 36)
-        let segmentControl4 = SharpSegmentControl(frame: rect4,
-                                                 btnTitles: ["btn1",
-                                                             "btn2",
-                                                             "btn3",
-                                                             "btn4"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
-                                                 radiusCornor: 10.0)
-        segmentControl4.backgroundColor = .red
-        self.view.addSubview(segmentControl4)
-        
-        // 5 button
-        let rect5 = CGRect(x: 0,
-                          y: 260,
-                          width: UIScreen.main.bounds.width,
-                          height: 36)
-        let segmentControl5 = SharpSegmentControl(frame: rect5,
-                                                 btnTitles: ["btn1",
-                                                             "btn2",
-                                                             "btn3",
-                                                             "btn4",
-                                                             "btn5"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
-                                                 radiusCornor: 10.0)
-        segmentControl5.backgroundColor = .red
-        segmentControl5.onTappedSegmentControl = onTappedSegmentControl
-        self.view.addSubview(segmentControl5)
+//        let rect = CGRect(x: 0,
+//                          y: 100,
+//                          width: UIScreen.main.bounds.width,
+//                          height: 36)
+//        let segmentControl = SharpSegmentControl(frame: rect,
+//                                                 btnTitles: ["btn1"],
+//                                                 activeColor: .green,
+//                                                 inactiveColor: .clear,
+//                                                 radiusCornor: 10.0)
+//        segmentControl.backgroundColor = .red
+//        self.view.addSubview(segmentControl)
+//        
+//        // 2 button
+//        let rect2 = CGRect(x: 0,
+//                          y: 140,
+//                          width: UIScreen.main.bounds.width,
+//                          height: 36)
+//        let segmentControl2 = SharpSegmentControl(frame: rect2,
+//                                                 btnTitles: ["btn1",
+//                                                             "btn2"],
+//                                                 activeColor: .green,
+//                                                 inactiveColor: .clear,
+//                                                 radiusCornor: 10.0)
+//        segmentControl2.backgroundColor = .red
+//        self.view.addSubview(segmentControl2)
+//        
+//        // 3 button
+//        let rect3 = CGRect(x: 0,
+//                          y: 180,
+//                          width: UIScreen.main.bounds.width,
+//                          height: 36)
+//        let segmentControl3 = SharpSegmentControl(frame: rect3,
+//                                                 btnTitles: ["btn1",
+//                                                             "btn2",
+//                                                             "btn3"],
+//                                                 activeColor: .green,
+//                                                 inactiveColor: .clear,
+//                                                 radiusCornor: 10.0)
+//        segmentControl3.backgroundColor = .red
+//        self.view.addSubview(segmentControl3)
+//        
+//        // 4 button
+//        let rect4 = CGRect(x: 0,
+//                          y: 220,
+//                          width: UIScreen.main.bounds.width,
+//                          height: 36)
+//        let segmentControl4 = SharpSegmentControl(frame: rect4,
+//                                                 btnTitles: ["btn1",
+//                                                             "btn2",
+//                                                             "btn3",
+//                                                             "btn4"],
+//                                                 activeColor: .green,
+//                                                 inactiveColor: .clear,
+//                                                 radiusCornor: 10.0)
+//        segmentControl4.backgroundColor = .red
+//        self.view.addSubview(segmentControl4)
+//        
+//        // 5 button
+//        let rect5 = CGRect(x: 0,
+//                          y: 260,
+//                          width: UIScreen.main.bounds.width,
+//                          height: 36)
+//        let segmentControl5 = SharpSegmentControl(frame: rect5,
+//                                                 btnTitles: ["btn1",
+//                                                             "btn2",
+//                                                             "btn3",
+//                                                             "btn4",
+//                                                             "btn5"],
+//                                                 activeColor: .green,
+//                                                 inactiveColor: .clear,
+//                                                 radiusCornor: 10.0)
+//        segmentControl5.backgroundColor = .red
+//        segmentControl5.onTappedSegmentControl = onTappedSegmentControl
+//        self.view.addSubview(segmentControl5)
         
         
     }
