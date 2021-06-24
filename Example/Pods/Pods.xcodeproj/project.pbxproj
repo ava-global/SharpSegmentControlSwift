@@ -11,10 +11,14 @@
 		0882ECDAA656CD25EA9FE2DD0C4C146D /* Pods-SharpSegmentControlSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E2B94261CC2549B2CDCB8DE8E5ADCF /* Pods-SharpSegmentControlSwift_Tests-dummy.m */; };
 		1941C9907E8493DDB49476039F48D312 /* Pods-SharpSegmentControlSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE0AFA35DC85426510C32B1945B1DB83 /* Pods-SharpSegmentControlSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E471668D5C41936800B39E829E320BA /* SharpSegmentControlSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D720F45948BAE0277325A3E80FCE5445 /* SharpSegmentControlSwift-dummy.m */; };
-		3A35917C7B4B8ADB1EF815C30691A0F2 /* SharpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF33F519E8CF200116D0EDC223E6A6A /* SharpButton.swift */; };
+		3D2B4A0326847BCE005EF710 /* SharpSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B4A0026847BCE005EF710 /* SharpSegmentControl.swift */; };
+		3D2B4A0426847BCE005EF710 /* SharpSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B4A0026847BCE005EF710 /* SharpSegmentControl.swift */; };
+		3D2B4A0526847BCE005EF710 /* SharpSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B4A0026847BCE005EF710 /* SharpSegmentControl.swift */; };
+		3D2B4A0926847BCE005EF710 /* SharpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B4A0226847BCE005EF710 /* SharpButton.swift */; };
+		3D2B4A0A26847BCE005EF710 /* SharpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B4A0226847BCE005EF710 /* SharpButton.swift */; };
+		3D2B4A0B26847BCE005EF710 /* SharpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B4A0226847BCE005EF710 /* SharpButton.swift */; };
 		559507C8F7171FC4AF01C638E8ED68F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		6437D3DA360A9BD39E5D701233FC81DF /* SharpSegmentControlSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB42871DEAF5D4DEE80F28721CF51B2 /* SharpSegmentControlSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		835BE3E935D833C63149928D744626B0 /* SharpSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AB6F7B1A98B01DC513426C636430D /* SharpSegmentControl.swift */; };
 		8BE996E31FD83A1191D180D0F47FF48A /* Pods-SharpSegmentControlSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B9018A136250633DA0AEEAC90D4B10 /* Pods-SharpSegmentControlSwift_Example-dummy.m */; };
 		B8A5C0E2F6FFB5A083B998ECAAB4C831 /* Pods-SharpSegmentControlSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 427ABC2E9090C12AC6B0C31BCE69191C /* Pods-SharpSegmentControlSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF25FFFB133A905F5C4EA1F7838CA3B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBC8F300895E39EA0DF6D6B2B5E6BCD /* XCTest.framework */; };
@@ -42,28 +46,28 @@
 		0DB92FB370B598939A6C8F26CEF55E79 /* Pods-SharpSegmentControlSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SharpSegmentControlSwift_Tests-Info.plist"; sourceTree = "<group>"; };
 		140117FA3552C1EB2E511B926367A39B /* Pods-SharpSegmentControlSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SharpSegmentControlSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		16B9018A136250633DA0AEEAC90D4B10 /* Pods-SharpSegmentControlSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SharpSegmentControlSwift_Example-dummy.m"; sourceTree = "<group>"; };
-		1D1267E28D3772FABA609480C6E17EBC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1D1267E28D3772FABA609480C6E17EBC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1FB42871DEAF5D4DEE80F28721CF51B2 /* SharpSegmentControlSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SharpSegmentControlSwift-umbrella.h"; sourceTree = "<group>"; };
-		2452214B88B6D2BFDED92CCF933C133B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2452214B88B6D2BFDED92CCF933C133B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3975AEF2A30E84F4A138CEB01DEF5C04 /* Pods-SharpSegmentControlSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SharpSegmentControlSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3E6A5031FBA852255B418D19B55CC3A8 /* SharpSegmentControlSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SharpSegmentControlSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3D2B4A0026847BCE005EF710 /* SharpSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpSegmentControl.swift; sourceTree = "<group>"; };
+		3D2B4A0226847BCE005EF710 /* SharpButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharpButton.swift; sourceTree = "<group>"; };
+		3E6A5031FBA852255B418D19B55CC3A8 /* SharpSegmentControlSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SharpSegmentControlSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		427ABC2E9090C12AC6B0C31BCE69191C /* Pods-SharpSegmentControlSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SharpSegmentControlSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		42D74E0CF01658FBED71B3D915F6680A /* SharpSegmentControlSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SharpSegmentControlSwift-prefix.pch"; sourceTree = "<group>"; };
 		45B7CF47EB5DA0E0A2CD3D9DF4AFBBC2 /* Pods-SharpSegmentControlSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SharpSegmentControlSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		49E2B94261CC2549B2CDCB8DE8E5ADCF /* Pods-SharpSegmentControlSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SharpSegmentControlSwift_Tests-dummy.m"; sourceTree = "<group>"; };
-		503C43F05B4D2A652C5E72C58EF07BE4 /* SharpSegmentControlSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SharpSegmentControlSwift.framework; path = SharpSegmentControlSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		503C43F05B4D2A652C5E72C58EF07BE4 /* SharpSegmentControlSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharpSegmentControlSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		534F1F4D0D31F4F7C7EE48A615B9E9CB /* Pods-SharpSegmentControlSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SharpSegmentControlSwift_Tests.modulemap"; sourceTree = "<group>"; };
 		5EBC8F300895E39EA0DF6D6B2B5E6BCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6467858240757917105D918B4D242A93 /* Pods-SharpSegmentControlSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SharpSegmentControlSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		64F36A484D88B80CE7DF288026802784 /* SharpSegmentControlSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SharpSegmentControlSwift-Info.plist"; sourceTree = "<group>"; };
-		65831AB21060974498E63E2A262B1438 /* Pods_SharpSegmentControlSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SharpSegmentControlSwift_Example.framework; path = "Pods-SharpSegmentControlSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A4AB6F7B1A98B01DC513426C636430D /* SharpSegmentControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharpSegmentControl.swift; path = SharpSegmentControlSwift/Classes/SharpSegmentControl.swift; sourceTree = "<group>"; };
-		6CF33F519E8CF200116D0EDC223E6A6A /* SharpButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharpButton.swift; path = SharpSegmentControlSwift/Classes/SharpButton.swift; sourceTree = "<group>"; };
+		65831AB21060974498E63E2A262B1438 /* Pods_SharpSegmentControlSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharpSegmentControlSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		769788DD82D512FA6923CBD9CA080BC4 /* Pods-SharpSegmentControlSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SharpSegmentControlSwift_Example-Info.plist"; sourceTree = "<group>"; };
 		8E9DE0C09BA7284E4BE20BE9FF7D26F6 /* SharpSegmentControlSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SharpSegmentControlSwift.modulemap; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA46EE652605ABFB8CB6E56E489C225 /* Pods-SharpSegmentControlSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SharpSegmentControlSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B58884BA3AD368363ED8D6C1E62A89AF /* Pods_SharpSegmentControlSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SharpSegmentControlSwift_Tests.framework; path = "Pods-SharpSegmentControlSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B58884BA3AD368363ED8D6C1E62A89AF /* Pods_SharpSegmentControlSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharpSegmentControlSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0AFA35DC85426510C32B1945B1DB83 /* Pods-SharpSegmentControlSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SharpSegmentControlSwift_Example-umbrella.h"; sourceTree = "<group>"; };
 		C8FCA7F999A3432B6D8810796C36228A /* Pods-SharpSegmentControlSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SharpSegmentControlSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -153,6 +157,16 @@
 			path = "Target Support Files/Pods-SharpSegmentControlSwift_Tests";
 			sourceTree = "<group>";
 		};
+		3D2B49FF26847BCE005EF710 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3D2B4A0026847BCE005EF710 /* SharpSegmentControl.swift */,
+				3D2B4A0226847BCE005EF710 /* SharpButton.swift */,
+			);
+			name = Classes;
+			path = SharpSegmentControlSwift/Classes;
+			sourceTree = "<group>";
+		};
 		974814B39C0012DECD183BBB91B32103 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,8 +179,7 @@
 		A1379DE0AA663420F1C55697F1FDDBB0 /* SharpSegmentControlSwift */ = {
 			isa = PBXGroup;
 			children = (
-				6CF33F519E8CF200116D0EDC223E6A6A /* SharpButton.swift */,
-				6A4AB6F7B1A98B01DC513426C636430D /* SharpSegmentControl.swift */,
+				3D2B49FF26847BCE005EF710 /* Classes */,
 				D33B385BB4B6091EDA23D77123765E4C /* Pod */,
 				2F13B45DA4E497F0810163ED4370224A /* Support Files */,
 			);
@@ -374,6 +387,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2B4A0A26847BCE005EF710 /* SharpButton.swift in Sources */,
+				3D2B4A0426847BCE005EF710 /* SharpSegmentControl.swift in Sources */,
 				0882ECDAA656CD25EA9FE2DD0C4C146D /* Pods-SharpSegmentControlSwift_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +397,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2B4A0926847BCE005EF710 /* SharpButton.swift in Sources */,
+				3D2B4A0326847BCE005EF710 /* SharpSegmentControl.swift in Sources */,
 				8BE996E31FD83A1191D180D0F47FF48A /* Pods-SharpSegmentControlSwift_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,8 +407,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A35917C7B4B8ADB1EF815C30691A0F2 /* SharpButton.swift in Sources */,
-				835BE3E935D833C63149928D744626B0 /* SharpSegmentControl.swift in Sources */,
+				3D2B4A0B26847BCE005EF710 /* SharpButton.swift in Sources */,
+				3D2B4A0526847BCE005EF710 /* SharpSegmentControl.swift in Sources */,
 				1E471668D5C41936800B39E829E320BA /* SharpSegmentControlSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,8 +710,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
