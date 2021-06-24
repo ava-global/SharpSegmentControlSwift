@@ -10,18 +10,18 @@ import UIKit
 
 public class SharpSegmentControl: UIView {
     
-    private(set) var horizontalStackView: UIStackView!
-    private(set) var selectedIndex: Int = 0
-    private(set) var activeColor: UIColor = UIColor.black
-    private(set) var inactiveColor: UIColor = UIColor.white
+    public private(set) var horizontalStackView: UIStackView!
+    public private(set) var selectedIndex: Int = 0
+    public private(set) var activeColor: UIColor = UIColor.black
+    public private(set) var inactiveColor: UIColor = UIColor.white
             
-    var segmentButtons: [SharpButton] {
+    public var segmentButtons: [SharpButton] {
         horizontalStackView
             .subviews
             .compactMap { ($0 as? SharpButton) }
     }
     
-    var segmentButtonCount: Int {
+    public var segmentButtonCount: Int {
         segmentButtons.count
     }
     
@@ -109,17 +109,6 @@ public class SharpSegmentControl: UIView {
         super.init(coder: coder)
     }
     
-    @objc private func onSegmentTapped(sender: SharpButton) {
-        guard
-            let segmentIndex = (segmentButtons.firstIndex{ $0 == sender })
-        else { return }
-        
-        print("button index \(segmentIndex) tapped !")
-        
-        selectSegmentIndex(segmentIndex)
-        onTappedSegmentControl(segmentIndex)
-    }
-    
     public func selectSegmentIndex(_ index: Int) {
         guard
             (index >= 0) &&
@@ -157,11 +146,26 @@ public class SharpSegmentControl: UIView {
                     .setFillShapeColor(buttonSharpColors[referene.offset])
         }
         
+    }      
+    
+}
+
+private extension SharpSegmentControl {
+    
+    @objc private func onSegmentTapped(sender: SharpButton) {
+        guard
+            let segmentIndex = (segmentButtons.firstIndex{ $0 == sender })
+        else { return }
+        
+        print("button index \(segmentIndex) tapped !")
+        
+        selectSegmentIndex(segmentIndex)
+        onTappedSegmentControl(segmentIndex)
     }
     
     // get all shape with selected state
-    private func buttonSharpSides(selectedIndex: Int,
-                                  count: Int) -> [SharpButton.SharpSide] {
+    func buttonSharpSides(selectedIndex: Int,
+                          count: Int) -> [SharpButton.SharpSide] {
         guard
             count > 0
         else { return [] }
@@ -196,17 +200,16 @@ public class SharpSegmentControl: UIView {
         return sharpSides
     }
     
-    private func buttonShapeColors(selectedIndex: Int,
-                                   count: Int,
-                                   activeColor: UIColor,
-                                   inactiveColor: UIColor) -> [UIColor] {
+    func buttonShapeColors(selectedIndex: Int,
+                           count: Int,
+                           activeColor: UIColor,
+                           inactiveColor: UIColor) -> [UIColor] {
         (0..<count)
             .enumerated()
             .map { reference in
                 (selectedIndex == reference.offset) ? activeColor : inactiveColor
             }
     }
-    
 }
 
 // layout

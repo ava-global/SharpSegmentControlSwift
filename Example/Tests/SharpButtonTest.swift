@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SharpSegmentControlSwift
 
 class SharpButtonTest: XCTestCase {
 
@@ -30,4 +31,19 @@ class SharpButtonTest: XCTestCase {
         }
     }
 
+    func testInit() {
+        let btn = SharpButton(.init(x: 0,
+                                    y: 0,
+                                    width: 100,
+                                    height: 30),
+                              fillShapeColor: .red,
+                              radiusCornor: 10,
+                              sharpSide: .none)
+        
+        XCTAssertEqual(btn.radiusCornor, 10)
+        XCTAssertEqual(btn.fillShapeColor, UIColor.red)
+        XCTAssertEqual(btn.sharpSide, SharpButton.SharpSide.none)
+    }
+    
 }
+

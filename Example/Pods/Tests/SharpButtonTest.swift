@@ -30,4 +30,7 @@ class SharpButtonTest: XCTestCase {
         }
     }
 
+    func testInit() {
+        
+    }
 }

@@ -11,14 +11,14 @@ import UIKit
 public class SharpButton: UIButton {
     
     private var shapeLayers: [CALayer] = []
-    private(set) var radiusCornor: CGFloat = 0
-    private(set) var fillShapeColor: UIColor = .white
-    private(set) var sharpSide: SharpSide = .none
+    public private(set) var radiusCornor: CGFloat = 0
+    public private(set) var fillShapeColor: UIColor = .white
+    public private(set) var sharpSide: SharpSide = .none
     
-    public  init(_ frame: CGRect = .zero,
-         fillShapeColor: UIColor = .white,
-         radiusCornor: CGFloat = 0,
-         sharpSide: SharpSide = .none) {
+    public init(_ frame: CGRect = .zero,
+                fillShapeColor: UIColor = .white,
+                radiusCornor: CGFloat = 0,
+                sharpSide: SharpSide = .none) {
         super.init(frame: frame)
         self.radiusCornor = radiusCornor
         self.fillShapeColor = fillShapeColor
@@ -73,16 +73,16 @@ public class SharpButton: UIButton {
     
 }
 
-extension SharpButton {
+private extension SharpButton {
     
-    private func removeShapeLayers() {
+    func removeShapeLayers() {
         shapeLayers
             .forEach({ $0.removeFromSuperlayer() })
         shapeLayers = []
     }
     
-    private func drawShape(_ rect: CGRect,
-                           kind: SharpSide) {
+    func drawShape(_ rect: CGRect,
+                   kind: SharpSide) {
         switch kind {
         case .rightBottom:
             shapeLayers += invertRightShapeLayers(rect: rect)
@@ -107,7 +107,7 @@ extension SharpButton {
     }
     
     // none activte button
-    private func roundShapeLayers(rect: CGRect) -> [CAShapeLayer] {
+    func roundShapeLayers(rect: CGRect) -> [CAShapeLayer] {
         
         var layers: [CAShapeLayer] = []
         //====== path 1 - Circle top left
@@ -212,7 +212,7 @@ extension SharpButton {
     }
     
     // left active button
-    private func invertRightShapeLayers(rect: CGRect) -> [CAShapeLayer] {
+    func invertRightShapeLayers(rect: CGRect) -> [CAShapeLayer] {
         
         var layers: [CAShapeLayer] = []
         
@@ -326,7 +326,7 @@ extension SharpButton {
     }
     
     // right active button
-    private func invertLeftShapeLayers(rect: CGRect) -> [CAShapeLayer] {
+    func invertLeftShapeLayers(rect: CGRect) -> [CAShapeLayer] {
         
         var layers: [CAShapeLayer] = []
         
@@ -440,7 +440,7 @@ extension SharpButton {
     }
         
     // bothBottom active button
-    private func invertLeftRightShapeLayers(rect: CGRect) -> [CAShapeLayer] {
+    func invertLeftRightShapeLayers(rect: CGRect) -> [CAShapeLayer] {
         
         var layers: [CAShapeLayer] = []
         
