@@ -18,5 +18,6 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "SharpSegmentControlSwift/Classes/**/*"
+  "source_files": "SharpSegmentControlSwift/Classes/**/*",
+  "frameworks": "XCTest"
 }

@@ -15,7 +15,7 @@ public class SharpButton: UIButton {
     private(set) var fillShapeColor: UIColor = .white
     private(set) var sharpSide: SharpSide = .none
     
-    init(_ frame: CGRect = .zero,
+    public  init(_ frame: CGRect = .zero,
          fillShapeColor: UIColor = .white,
          radiusCornor: CGFloat = 0,
          sharpSide: SharpSide = .none) {
