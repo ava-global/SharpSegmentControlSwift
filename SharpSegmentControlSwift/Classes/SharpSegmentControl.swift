@@ -219,7 +219,7 @@ extension SharpSegmentControl {
         .init(item: horizontalStackView!,
               attribute: .leading,
               relatedBy: .equal,
-              toItem: horizontalStackView,
+              toItem: self,
               attribute: .leading,
               multiplier: 1.0,
               constant: 0)
@@ -229,7 +229,7 @@ extension SharpSegmentControl {
         .init(item: horizontalStackView!,
               attribute: .trailing,
               relatedBy: .equal,
-              toItem: horizontalStackView,
+              toItem: self,
               attribute: .trailing,
               multiplier: 1.0,
               constant: 0)
