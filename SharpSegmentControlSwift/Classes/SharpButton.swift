@@ -314,10 +314,14 @@ private extension SharpButton {
                                 y: rect.height))
         
         // =======
-        path5.addLine(to: .init(x: radiusCornor,
-                                y: rect.height))
+//        path5.addLine(to: .init(x: radiusCornor,
+//                                y: rect.height))
+//        path5.addLine(to: .init(x: 0,
+//                                y: rect.height - radiusCornor))
+        // #update
         path5.addLine(to: .init(x: 0,
-                                y: rect.height - radiusCornor))
+                                y: rect.height))
+        
         path5.close()
         
         let shapeLayer5: CAShapeLayer = CAShapeLayer()
@@ -415,9 +419,13 @@ private extension SharpButton {
                                 y: radiusCornor))
         
         // =======
+//        path5.addLine(to: .init(x: rect.width,
+//                                y: rect.height - radiusCornor))
+//        path5.addLine(to: .init(x: rect.width - radiusCornor,
+//                                y: rect.height))
+        
+        // #update
         path5.addLine(to: .init(x: rect.width,
-                                y: rect.height - radiusCornor))
-        path5.addLine(to: .init(x: rect.width - radiusCornor,
                                 y: rect.height))
                            
         // ===== draw left bottom curve
