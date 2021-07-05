@@ -39,26 +39,32 @@ class SharpSegmentControlTest: XCTestCase {
         
         let control1 = SharpSegmentControl(frame: rect,
                                            btnTitles: ["btn1"],
-                                           activeColor: .red,
-                                           inactiveColor: .blue,
+                                           activeBackgroundColor: .red,
+                                           inactiveBackgroundColor: .blue,
+                                           activeTextColor: .black,
+                                           inactiveTextColor: .white,
+                                           btnFont: nil,
                                            radiusCornor: 2)
         
         XCTAssertEqual(control1.selectedIndex, 0)
-        XCTAssertEqual(control1.activeColor, UIColor.red)
-        XCTAssertEqual(control1.inactiveColor, UIColor.blue)
+        XCTAssertEqual(control1.activeBackgroundColor, UIColor.red)
+        XCTAssertEqual(control1.inactiveBackgroundColor, UIColor.blue)
         XCTAssertEqual(control1.segmentButtons.count, 1)
         XCTAssertEqual(control1.segmentButtonCount, 1)
                     
         
         let control2 = SharpSegmentControl(frame: rect,
                                            btnTitles: ["btn1" , "btn2"],
-                                           activeColor: .green,
-                                           inactiveColor: .black,
+                                           activeBackgroundColor: .green,
+                                           inactiveBackgroundColor: .black,
+                                           activeTextColor: .black,
+                                           inactiveTextColor: .white,
+                                           btnFont: nil,
                                            radiusCornor: 10)
         
         XCTAssertEqual(control2.selectedIndex, 0)
-        XCTAssertEqual(control2.activeColor, UIColor.green)
-        XCTAssertEqual(control2.inactiveColor, UIColor.black)
+        XCTAssertEqual(control2.activeBackgroundColor, UIColor.green)
+        XCTAssertEqual(control2.inactiveBackgroundColor, UIColor.black)
         XCTAssertEqual(control2.segmentButtons.count, 2)
         XCTAssertEqual(control2.segmentButtonCount, 2)
     }
@@ -69,15 +75,19 @@ class SharpSegmentControlTest: XCTestCase {
                           width: 100,
                           height: 30)
         
+        
         let control1 = SharpSegmentControl(frame: rect,
-                                           btnTitles: ["btn1"],
-                                           activeColor: .red,
-                                           inactiveColor: .blue,
+                                           btnTitles: ["btn1" ],
+                                           activeBackgroundColor: .red,
+                                           inactiveBackgroundColor: .blue,
+                                           activeTextColor: .black,
+                                           inactiveTextColor: .white,
+                                           btnFont: nil,
                                            radiusCornor: 2)
         
         XCTAssertEqual(control1.selectedIndex, 0)
-        XCTAssertEqual(control1.activeColor, UIColor.red)
-        XCTAssertEqual(control1.inactiveColor, UIColor.blue)
+        XCTAssertEqual(control1.activeBackgroundColor, UIColor.red)
+        XCTAssertEqual(control1.inactiveBackgroundColor, UIColor.blue)
         XCTAssertEqual(control1.segmentButtons.count, 1)
         XCTAssertEqual(control1.segmentButtonCount, 1)
         
@@ -99,15 +109,19 @@ class SharpSegmentControlTest: XCTestCase {
         control1.selectSegmentIndex(0)
         XCTAssertEqual(control1.selectedIndex, 0)
         
+        
         let control2 = SharpSegmentControl(frame: rect,
                                            btnTitles: ["btn1" , "btn2" , "btn3" , "btn4"],
-                                           activeColor: .red,
-                                           inactiveColor: .blue,
+                                           activeBackgroundColor: .red,
+                                           inactiveBackgroundColor: .blue,
+                                           activeTextColor: .black,
+                                           inactiveTextColor: .white,
+                                           btnFont: nil,
                                            radiusCornor: 2)
         
         XCTAssertEqual(control2.selectedIndex, 0)
-        XCTAssertEqual(control2.activeColor, UIColor.red)
-        XCTAssertEqual(control2.inactiveColor, UIColor.blue)
+        XCTAssertEqual(control2.activeBackgroundColor, UIColor.red)
+        XCTAssertEqual(control2.inactiveBackgroundColor, UIColor.blue)
         XCTAssertEqual(control2.segmentButtons.count, 4)
         XCTAssertEqual(control2.segmentButtonCount, 4)
         
@@ -142,15 +156,19 @@ class SharpSegmentControlTest: XCTestCase {
                           width: 100,
                           height: 30)
         
+        
         let control2 = SharpSegmentControl(frame: rect,
                                            btnTitles: ["btn1" , "btn2" , "btn3" , "btn4"],
-                                           activeColor: .red,
-                                           inactiveColor: .blue,
+                                           activeBackgroundColor: .red,
+                                           inactiveBackgroundColor: .blue,
+                                           activeTextColor: .black,
+                                           inactiveTextColor: .white,
+                                           btnFont: nil,
                                            radiusCornor: 2)
         
         XCTAssertEqual(control2.selectedIndex, 0)
-        XCTAssertEqual(control2.activeColor, UIColor.red)
-        XCTAssertEqual(control2.inactiveColor, UIColor.blue)
+        XCTAssertEqual(control2.activeBackgroundColor, UIColor.red)
+        XCTAssertEqual(control2.inactiveBackgroundColor, UIColor.blue)
         XCTAssertEqual(control2.segmentButtons.count, 4)
         XCTAssertEqual(control2.segmentButtonCount, 4)
         
@@ -187,13 +205,16 @@ class SharpSegmentControlTest: XCTestCase {
         
         let control2 = SharpSegmentControl(frame: rect,
                                            btnTitles: ["btn1" , "btn2" , "btn3" , "btn4"],
-                                           activeColor: .red,
-                                           inactiveColor: .blue,
+                                           activeBackgroundColor: .red,
+                                           inactiveBackgroundColor: .blue,
+                                           activeTextColor: .black,
+                                           inactiveTextColor: .white,
+                                           btnFont: nil,
                                            radiusCornor: 2)
         
         XCTAssertEqual(control2.selectedIndex, 0)
-        XCTAssertEqual(control2.activeColor, UIColor.red)
-        XCTAssertEqual(control2.inactiveColor, UIColor.blue)
+        XCTAssertEqual(control2.activeBackgroundColor, UIColor.red)
+        XCTAssertEqual(control2.inactiveBackgroundColor, UIColor.blue)
         XCTAssertEqual(control2.segmentButtons.count, 4)
         XCTAssertEqual(control2.segmentButtonCount, 4)
         

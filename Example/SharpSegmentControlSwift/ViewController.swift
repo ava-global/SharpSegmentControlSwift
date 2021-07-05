@@ -55,10 +55,13 @@ class ViewController: UIViewController {
                           height: 36)
         let segmentControl = SharpSegmentControl(frame: rect,
                                                  btnTitles: ["btn1"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
+                                                 activeBackgroundColor: .green,
+                                                 inactiveBackgroundColor: .white,
+                                                 activeTextColor: .white,
+                                                 inactiveTextColor: .black,
+                                                 btnFont: UIFont.systemFont(ofSize: 30),
                                                  radiusCornor: 10.0)
-        segmentControl.backgroundColor = .red
+        //segmentControl.backgroundColor = .red
         self.view.addSubview(segmentControl)
         
         // 2 button
@@ -69,10 +72,13 @@ class ViewController: UIViewController {
         let segmentControl2 = SharpSegmentControl(frame: rect2,
                                                  btnTitles: ["btn1",
                                                              "btn2"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
+                                                 activeBackgroundColor: .green,
+                                                 inactiveBackgroundColor: .white,
+                                                 activeTextColor: .white,
+                                                 inactiveTextColor: .black,
+                                                 btnFont: UIFont.systemFont(ofSize: 30),
                                                  radiusCornor: 10.0)
-        segmentControl2.backgroundColor = .red
+        //segmentControl2.backgroundColor = .red
         self.view.addSubview(segmentControl2)
         
         // 3 button
@@ -84,10 +90,13 @@ class ViewController: UIViewController {
                                                  btnTitles: ["btn1",
                                                              "btn2",
                                                              "btn3"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
+                                                 activeBackgroundColor: .green,
+                                                 inactiveBackgroundColor: .white,
+                                                 activeTextColor: .white,
+                                                 inactiveTextColor: .black,
+
                                                  radiusCornor: 10.0)
-        segmentControl3.backgroundColor = .red
+//segmentControl3.backgroundColor = .red
         self.view.addSubview(segmentControl3)
         
         // 4 button
@@ -100,10 +109,12 @@ class ViewController: UIViewController {
                                                              "btn2",
                                                              "btn3",
                                                              "btn4"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
+                                                 activeBackgroundColor: .green,
+                                                 inactiveBackgroundColor: .white,
+                                                 activeTextColor: .white,
+                                                 inactiveTextColor: .black,
                                                  radiusCornor: 10.0)
-        segmentControl4.backgroundColor = .red
+        //segmentControl4.backgroundColor = .red
         self.view.addSubview(segmentControl4)
         
         // 5 button
@@ -117,10 +128,12 @@ class ViewController: UIViewController {
                                                              "btn3",
                                                              "btn4",
                                                              "btn5"],
-                                                 activeColor: .green,
-                                                 inactiveColor: .clear,
+                                                 activeBackgroundColor: .green,
+                                                 inactiveBackgroundColor: .white,
+                                                 activeTextColor: .white,
+                                                 inactiveTextColor: .black,
                                                  radiusCornor: 10.0)
-        segmentControl5.backgroundColor = .red
+        //segmentControl5.backgroundColor = .red
         segmentControl5.onTappedSegmentControl = onTappedSegmentControl
         self.view.addSubview(segmentControl5)
         

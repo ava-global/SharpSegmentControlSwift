@@ -12,8 +12,10 @@ public class SharpSegmentControl: UIView {
     
     public private(set) var horizontalStackView: UIStackView!
     public private(set) var selectedIndex: Int = 0
-    public private(set) var activeColor: UIColor = UIColor.black
-    public private(set) var inactiveColor: UIColor = UIColor.white
+    public private(set) var activeBackgroundColor: UIColor = UIColor.black
+    public private(set) var inactiveBackgroundColor: UIColor = UIColor.white
+    public private(set) var activeTextColor: UIColor = UIColor.white
+    public private(set) var inactiveTextColor: UIColor = UIColor.black
             
     public var segmentButtons: [SharpButton] {
         horizontalStackView
@@ -29,8 +31,11 @@ public class SharpSegmentControl: UIView {
     
     public init(frame: CGRect,
                  btnTitles: [String],
-                 activeColor: UIColor,
-                 inactiveColor: UIColor,
+                 activeBackgroundColor: UIColor,
+                 inactiveBackgroundColor: UIColor,
+                 activeTextColor: UIColor,
+                 inactiveTextColor: UIColor,
+                 btnFont: UIFont? = nil,
                  radiusCornor: CGFloat) {
                 super.init(frame: frame)
                 
@@ -55,23 +60,30 @@ public class SharpSegmentControl: UIView {
                 horizontalStackViewBottomConstraint.isActive = true
                 
                 // setup button
-                self.activeColor = activeColor
-                self.inactiveColor = inactiveColor
+                self.activeBackgroundColor = activeBackgroundColor
+                self.inactiveBackgroundColor = inactiveBackgroundColor
+                self.activeTextColor = activeTextColor
+                self.inactiveTextColor = inactiveTextColor
                 self.selectedIndex = 0
                         
                 if btnTitles.count == 1 {
-                    let btn = SharpButton(fillShapeColor: activeColor,
-                                              radiusCornor: radiusCornor,
-                                              sharpSide: .none)
+                    let btn = SharpButton(fillShapeColor: activeBackgroundColor,
+                                          radiusCornor: radiusCornor,
+                                          sharpSide: .none)
                     btn.setTitle(btnTitles[0],
                                  for: .normal)
+                    btn.setTitleColor(activeTextColor,
+                                      for: .normal)
+                    btn.titleLabel?.font = btnFont
+
                     horizontalStackView.addArrangedSubview(btn)
                 }
                 else if btnTitles.count > 1 {
                     btnTitles
                         .enumerated()
                         .forEach { reference in
-                            let fillShapeColor = (reference.offset == self.selectedIndex) ? activeColor : inactiveColor
+                            let fillShapeColor = (reference.offset == self.selectedIndex) ? activeBackgroundColor : inactiveBackgroundColor
+                            let textColor = (reference.offset == self.selectedIndex) ? activeTextColor : inactiveTextColor
                             // create button 0
                             if reference.offset == 0 {
                                 let btn = SharpButton(fillShapeColor: fillShapeColor,
@@ -79,6 +91,10 @@ public class SharpSegmentControl: UIView {
                                                           sharpSide: .rightBottom)
                                 btn.setTitle(reference.element,
                                              for: .normal)
+                                btn.setTitleColor(textColor,
+                                                  for: .normal)
+                                btn.titleLabel?.font = btnFont
+                                
                                 btn.addTarget(self,
                                               action: #selector(onSegmentTapped),
                                               for: .touchUpInside)
@@ -92,6 +108,10 @@ public class SharpSegmentControl: UIView {
                                                           sharpSide: .none)
                                 btn.setTitle(reference.element,
                                              for: .normal)
+                                btn.setTitleColor(textColor,
+                                                  for: .normal)
+                                btn.titleLabel?.font = btnFont
+                                
                                 btn.addTarget(self,
                                               action: #selector(onSegmentTapped),
                                               for: .touchUpInside)
@@ -123,12 +143,20 @@ public class SharpSegmentControl: UIView {
         print("buttonSharpSides")
         print(buttonSharpSides)
         
-        let buttonSharpColors = buttonShapeColors(selectedIndex: index,
-                                                  count: segmentButtonCount,
-                                                  activeColor: activeColor,
-                                                  inactiveColor: inactiveColor)
-        print("buttonSharpColors")
-        print(buttonSharpColors)
+        let buttonSharpBackgroundColors = buttonShapeBackgroundColors(selectedIndex: index,
+                                                                      count: segmentButtonCount,
+                                                                      activeColor: activeBackgroundColor,
+                                                                      inactiveColor: inactiveBackgroundColor)
+                
+        print("buttonSharpBackgroundColors")
+        print(buttonSharpBackgroundColors)
+        
+        let buttonShapeTextColors = buttonShapeTextColors(selectedIndex: index,
+                                                          count: segmentButtonCount,
+                                                          activeColor: activeTextColor,
+                                                          inactiveColor: inactiveTextColor)
+        print("buttonSharpTextColors")
+        print(buttonShapeTextColors)
         
         // update shape and color
         segmentButtons
@@ -139,10 +167,15 @@ public class SharpSegmentControl: UIView {
                     .element
                     .setSharpSide(buttonSharpSides[referene.offset])
                 
-                // update shape color
+                // update shape background color
                 referene
                     .element
-                    .setFillShapeColor(buttonSharpColors[referene.offset])
+                    .setFillShapeColor(buttonSharpBackgroundColors[referene.offset])
+                
+                // update shape text color
+                referene
+                    .element
+                    .setFillShapeTextColor(buttonShapeTextColors[referene.offset])
         }
         
     }      
@@ -199,16 +232,28 @@ private extension SharpSegmentControl {
         return sharpSides
     }
     
-    func buttonShapeColors(selectedIndex: Int,
-                           count: Int,
-                           activeColor: UIColor,
-                           inactiveColor: UIColor) -> [UIColor] {
+    func buttonShapeBackgroundColors(selectedIndex: Int,
+                                     count: Int,
+                                     activeColor: UIColor,
+                                     inactiveColor: UIColor) -> [UIColor] {
         (0..<count)
             .enumerated()
             .map { reference in
                 (selectedIndex == reference.offset) ? activeColor : inactiveColor
             }
     }
+    
+    func buttonShapeTextColors(selectedIndex: Int,
+                               count: Int,
+                               activeColor: UIColor,
+                               inactiveColor: UIColor) -> [UIColor] {
+        (0..<count)
+            .enumerated()
+            .map { reference in
+                (selectedIndex == reference.offset) ? activeColor : inactiveColor
+            }
+    }
+    
 }
 
 // layout

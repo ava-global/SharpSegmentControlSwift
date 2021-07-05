@@ -22,8 +22,7 @@ public class SharpButton: UIButton {
         super.init(frame: frame)
         self.radiusCornor = radiusCornor
         self.fillShapeColor = fillShapeColor
-        self.sharpSide = sharpSide
-
+        self.sharpSide = sharpSide        
         if frame.size == .zero { return }
         
         let rect = CGRect(x: 0,
@@ -43,6 +42,11 @@ public class SharpButton: UIButton {
        
         drawShape(rect,
                   kind: sharpSide)
+    }
+    
+    public func setFillShapeTextColor(_ color: UIColor) {
+        self.setTitleColor(color,
+                           for: .normal)
     }
     
     public func setFillShapeColor(_ color: UIColor) {
