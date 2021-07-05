@@ -46,7 +46,6 @@ public class SharpSegmentControl: UIView {
                                                           height: frame.height))
                 horizontalStackView.axis = .horizontal
                 horizontalStackView.distribution = .fillEqually
-                horizontalStackView.backgroundColor = .red
                 self.addSubview(horizontalStackView)
                 
                 // setup horizontalStackView layout
