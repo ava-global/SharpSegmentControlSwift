@@ -140,23 +140,23 @@ public class SharpSegmentControl: UIView {
         let buttonSharpSides = buttonSharpSides(selectedIndex: index,
                                                 count: segmentButtonCount)
         
-        print("buttonSharpSides")
-        print(buttonSharpSides)
+//        print("buttonSharpSides")
+//        print(buttonSharpSides)
         
         let buttonSharpBackgroundColors = buttonShapeBackgroundColors(selectedIndex: index,
                                                                       count: segmentButtonCount,
                                                                       activeColor: activeBackgroundColor,
                                                                       inactiveColor: inactiveBackgroundColor)
                 
-        print("buttonSharpBackgroundColors")
-        print(buttonSharpBackgroundColors)
+//        print("buttonSharpBackgroundColors")
+//        print(buttonSharpBackgroundColors)
         
         let buttonShapeTextColors = buttonShapeTextColors(selectedIndex: index,
                                                           count: segmentButtonCount,
                                                           activeColor: activeTextColor,
                                                           inactiveColor: inactiveTextColor)
-        print("buttonSharpTextColors")
-        print(buttonShapeTextColors)
+//        print("buttonSharpTextColors")
+//        print(buttonShapeTextColors)
         
         // update shape and color
         segmentButtons
@@ -189,7 +189,7 @@ private extension SharpSegmentControl {
             let segmentIndex = (segmentButtons.firstIndex{ $0 == sender })
         else { return }
         
-        print("button index \(segmentIndex) tapped !")
+        //print("button index \(segmentIndex) tapped !")
         
         selectSegmentIndex(segmentIndex)
         onTappedSegmentControl(segmentIndex)
