@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SharpSegmentControlSwift'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A short description of SharpSegmentControlSwift.'
 
 # This description is used to generate tags and improve search results.
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 FEAT: Initial frameworks suuport set default selectedIndex
+FIX: Initial frameworks
                        DESC
 
   s.homepage         = 'https://github.com/ava-global/SharpSegmentControlSwift'

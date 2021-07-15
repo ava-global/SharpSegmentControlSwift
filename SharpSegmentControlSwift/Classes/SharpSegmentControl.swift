@@ -65,7 +65,7 @@ public class SharpSegmentControl: UIView {
                 self.inactiveBackgroundColor = inactiveBackgroundColor
                 self.activeTextColor = activeTextColor
                 self.inactiveTextColor = inactiveTextColor
-                self.selectedIndex = 0
+                self.selectedIndex = selectedIndex
                         
                 if btnTitles.count == 1 {
                     let btn = SharpButton(fillShapeColor: activeBackgroundColor,
