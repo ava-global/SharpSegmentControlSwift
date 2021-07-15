@@ -31,6 +31,7 @@ public class SharpSegmentControl: UIView {
     
     public init(frame: CGRect,
                  btnTitles: [String],
+                 selectedIndex: Int = 0,
                  activeBackgroundColor: UIColor,
                  inactiveBackgroundColor: UIColor,
                  activeTextColor: UIColor,
