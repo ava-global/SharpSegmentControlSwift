@@ -42,7 +42,9 @@ public class SharpSegmentControl: UIView {
                 
                 guard
                     btnTitles.count > 0 &&
-                        btnTitles.count <= 5
+                        btnTitles.count <= 5,
+                    selectedIndex >= 0 &&
+                        selectedIndex < btnTitles.count
                 else { fatalError("required 1-5 button titles") }
                 
                 // setup stack view
@@ -80,45 +82,124 @@ public class SharpSegmentControl: UIView {
                     horizontalStackView.addArrangedSubview(btn)
                 }
                 else if btnTitles.count > 1 {
+                    let lastIndex = btnTitles.count - 1
                     btnTitles
                         .enumerated()
                         .forEach { reference in
                             let fillShapeColor = (reference.offset == self.selectedIndex) ? activeBackgroundColor : inactiveBackgroundColor
                             let textColor = (reference.offset == self.selectedIndex) ? activeTextColor : inactiveTextColor
                             // create button 0
-                            if reference.offset == 0 {
-                                let btn = SharpButton(fillShapeColor: fillShapeColor,
-                                                          radiusCornor: radiusCornor,
-                                                          sharpSide: .rightBottom)
-                                btn.setTitle(reference.element,
-                                             for: .normal)
-                                btn.setTitleColor(textColor,
-                                                  for: .normal)
-                                btn.titleLabel?.font = btnFont
+                            switch selectedIndex {
+                            case 0:
+                                if reference.offset == 0 {
+                                    let btn = SharpButton(fillShapeColor: fillShapeColor,
+                                                              radiusCornor: radiusCornor,
+                                                              sharpSide: .rightBottom)
+                                    btn.setTitle(reference.element,
+                                                 for: .normal)
+                                    btn.setTitleColor(textColor,
+                                                      for: .normal)
+                                    btn.titleLabel?.font = btnFont
+
+                                    btn.addTarget(self,
+                                                  action: #selector(onSegmentTapped),
+                                                  for: .touchUpInside)
+
+                                    horizontalStackView.addArrangedSubview(btn)
+                                }
+                                // create button 1-5
+                                else {
+                                    let btn = SharpButton(fillShapeColor: fillShapeColor,
+                                                              radiusCornor: radiusCornor,
+                                                              sharpSide: .none)
+                                    btn.setTitle(reference.element,
+                                                 for: .normal)
+                                    btn.setTitleColor(textColor,
+                                                      for: .normal)
+                                    btn.titleLabel?.font = btnFont
+
+                                    btn.addTarget(self,
+                                                  action: #selector(onSegmentTapped),
+                                                  for: .touchUpInside)
+
+                                    horizontalStackView.addArrangedSubview(btn)
+                                }
                                 
-                                btn.addTarget(self,
-                                              action: #selector(onSegmentTapped),
-                                              for: .touchUpInside)
+                            case 1..<lastIndex:
+                                if reference.offset == selectedIndex {
+                                    let btn = SharpButton(fillShapeColor: fillShapeColor,
+                                                              radiusCornor: radiusCornor,
+                                                              sharpSide: .bothBottom)
+                                    btn.setTitle(reference.element,
+                                                 for: .normal)
+                                    btn.setTitleColor(textColor,
+                                                      for: .normal)
+                                    btn.titleLabel?.font = btnFont
+
+                                    btn.addTarget(self,
+                                                  action: #selector(onSegmentTapped),
+                                                  for: .touchUpInside)
+
+                                    horizontalStackView.addArrangedSubview(btn)
+                                }
+                                // create button 1-X , X-5
+                                else {
+                                    let btn = SharpButton(fillShapeColor: fillShapeColor,
+                                                              radiusCornor: radiusCornor,
+                                                              sharpSide: .none)
+                                    btn.setTitle(reference.element,
+                                                 for: .normal)
+                                    btn.setTitleColor(textColor,
+                                                      for: .normal)
+                                    btn.titleLabel?.font = btnFont
+
+                                    btn.addTarget(self,
+                                                  action: #selector(onSegmentTapped),
+                                                  for: .touchUpInside)
+
+                                    horizontalStackView.addArrangedSubview(btn)
+                                }
                                 
-                                horizontalStackView.addArrangedSubview(btn)
+                            case lastIndex:
+                                if reference.offset == lastIndex {
+                                    let btn = SharpButton(fillShapeColor: fillShapeColor,
+                                                              radiusCornor: radiusCornor,
+                                                              sharpSide: .leftBottom)
+                                    btn.setTitle(reference.element,
+                                                 for: .normal)
+                                    btn.setTitleColor(textColor,
+                                                      for: .normal)
+                                    btn.titleLabel?.font = btnFont
+
+                                    btn.addTarget(self,
+                                                  action: #selector(onSegmentTapped),
+                                                  for: .touchUpInside)
+
+                                    horizontalStackView.addArrangedSubview(btn)
+                                }
+                                // create button 1-5
+                                else {
+                                    let btn = SharpButton(fillShapeColor: fillShapeColor,
+                                                              radiusCornor: radiusCornor,
+                                                              sharpSide: .none)
+                                    btn.setTitle(reference.element,
+                                                 for: .normal)
+                                    btn.setTitleColor(textColor,
+                                                      for: .normal)
+                                    btn.titleLabel?.font = btnFont
+
+                                    btn.addTarget(self,
+                                                  action: #selector(onSegmentTapped),
+                                                  for: .touchUpInside)
+
+                                    horizontalStackView.addArrangedSubview(btn)
+                                }
+                                
+                            default:
+                                break
+                                
                             }
-                            // create button 1-5
-                            else {
-                                let btn = SharpButton(fillShapeColor: fillShapeColor,
-                                                          radiusCornor: radiusCornor,
-                                                          sharpSide: .none)
-                                btn.setTitle(reference.element,
-                                             for: .normal)
-                                btn.setTitleColor(textColor,
-                                                  for: .normal)
-                                btn.titleLabel?.font = btnFont
-                                
-                                btn.addTarget(self,
-                                              action: #selector(onSegmentTapped),
-                                              for: .touchUpInside)
-                                
-                                horizontalStackView.addArrangedSubview(btn)
-                            }
+
                     }
                     
                 }
