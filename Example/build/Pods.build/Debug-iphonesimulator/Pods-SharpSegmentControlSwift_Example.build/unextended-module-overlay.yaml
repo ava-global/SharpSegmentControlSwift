@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/introdexmac/GitHub/SharpSegmentControlSwift/Example/build/Debug-iphonesimulator/Pods_SharpSegmentControlSwift_Example.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/introdexmac/GitHub/SharpSegmentControlSwift/Example/build/Pods.build/Debug-iphonesimulator/Pods-SharpSegmentControlSwift_Example.build/unextended-module.modulemap",
+    }]
+  }]
+}

@@ -1,0 +1,10 @@
+framework module SharpSegmentControlSwift {
+  umbrella header "SharpSegmentControlSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SharpSegmentControlSwift.__Swift {
+    exclude header "SharpSegmentControlSwift-Swift.h"
+}

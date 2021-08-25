@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)"
+options: "5601f5eb850840634d675c6098acd3f0"
+build_time: [1629852410, 896095000]
+inputs:
+  "/Users/introdexmac/GitHub/SharpSegmentControlSwift/SharpSegmentControlSwift/Classes/SharpButton.swift": [1629852401, 907402323]
+  "/Users/introdexmac/GitHub/SharpSegmentControlSwift/SharpSegmentControlSwift/Classes/SharpSegmentControl.swift": [1629793529, 368300624]

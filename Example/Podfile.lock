@@ -1,5 +1,5 @@
 PODS:
-  - SharpSegmentControlSwift (0.1.0)
+  - SharpSegmentControlSwift (0.1.6)
 
 DEPENDENCIES:
   - SharpSegmentControlSwift (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SharpSegmentControlSwift: bd56202927174206e92da806682ed3aa740c35a7
+  SharpSegmentControlSwift: 2fa5061314c0bb74d2e4f5607b7147bfa9532188
 
 PODFILE CHECKSUM: faad512e46d8279d6aab077937b8067cb297a7c2
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

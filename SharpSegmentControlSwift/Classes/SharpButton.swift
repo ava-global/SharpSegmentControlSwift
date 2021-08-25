@@ -14,15 +14,18 @@ public class SharpButton: UIButton {
     public private(set) var radiusCornor: CGFloat = 0
     public private(set) var fillShapeColor: UIColor = .white
     public private(set) var sharpSide: SharpSide = .none
+    public private(set) var sharpStyle: SharpStyle = .sharp
     
     public init(_ frame: CGRect = .zero,
                 fillShapeColor: UIColor = .white,
                 radiusCornor: CGFloat = 0,
-                sharpSide: SharpSide = .none) {
+                sharpSide: SharpSide = .none,
+                sharpStyle: SharpStyle = .round) {
         super.init(frame: frame)
         self.radiusCornor = radiusCornor
         self.fillShapeColor = fillShapeColor
-        self.sharpSide = sharpSide        
+        self.sharpSide = sharpSide
+        self.sharpStyle = sharpStyle
         if frame.size == .zero { return }
         
         let rect = CGRect(x: 0,
@@ -87,27 +90,50 @@ private extension SharpButton {
     
     func drawShape(_ rect: CGRect,
                    kind: SharpSide) {
-        switch kind {
-        case .rightBottom:
-            shapeLayers += invertRightShapeLayers(rect: rect)
-            shapeLayers
-                .forEach { self.layer.insertSublayer($0,at: 0)}
-                        
-        case .bothBottom:
-            shapeLayers += invertLeftRightShapeLayers(rect: rect)
+        
+        switch sharpStyle {
+        case .round:
+            shapeLayers += roundLayers(rect: rect)
             shapeLayers
                 .forEach { self.layer.insertSublayer($0,at: 0)}
             
-        case .leftBottom:
-            shapeLayers += invertLeftShapeLayers(rect: rect)
-            shapeLayers
-                .forEach { self.layer.insertSublayer($0,at: 0)}
-            
-        case .none:
-            shapeLayers += roundShapeLayers(rect: rect)
-            shapeLayers
-                .forEach { self.layer.insertSublayer($0,at: 0)}
+        case .sharp:
+            switch kind {
+            case .rightBottom:
+                shapeLayers += invertRightShapeLayers(rect: rect)
+                shapeLayers
+                    .forEach { self.layer.insertSublayer($0,at: 0)}
+                            
+            case .bothBottom:
+                shapeLayers += invertLeftRightShapeLayers(rect: rect)
+                shapeLayers
+                    .forEach { self.layer.insertSublayer($0,at: 0)}
+                
+            case .leftBottom:
+                shapeLayers += invertLeftShapeLayers(rect: rect)
+                shapeLayers
+                    .forEach { self.layer.insertSublayer($0,at: 0)}
+                
+            case .none:
+                shapeLayers += roundShapeLayers(rect: rect)
+                shapeLayers
+                    .forEach { self.layer.insertSublayer($0,at: 0)}
+            }
         }
+                
+    }
+    
+    func roundLayers(rect: CGRect) -> [CAShapeLayer] {
+        let path = UIBezierPath(roundedRect: rect,
+                                byRoundingCorners: [.topLeft,
+                                                    .topRight],
+                                cornerRadii: CGSize(width: radiusCornor,
+                                                    height: radiusCornor))
+        let layer = CAShapeLayer()
+        layer.frame = rect
+        layer.path = path.cgPath
+        layer.fillColor = fillShapeColor.cgColor
+        return [layer]
     }
     
     // none activte button
@@ -579,6 +605,11 @@ extension SharpButton {
         case rightBottom
         case bothBottom
         case none
+    }
+    
+    public enum SharpStyle {
+        case round // upper cornor round
+        case sharp // upper cornor round with bottom sharp cornor
     }
     
     // == degrees to radians convertor ==

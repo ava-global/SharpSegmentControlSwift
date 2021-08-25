@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+SharpSegmentControlSwift in Pods
+Pods-SharpSegmentControlSwift_Example in Pods, depends on:
+SharpSegmentControlSwift in Pods (explicit)
+Pods-SharpSegmentControlSwift_Tests in Pods, depends on:
+Pods-SharpSegmentControlSwift_Example in Pods (explicit)

@@ -1,0 +1,10 @@
+framework module Pods_SharpSegmentControlSwift_Example {
+  umbrella header "Pods-SharpSegmentControlSwift_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Pods_SharpSegmentControlSwift_Example.__Swift {
+    exclude header "Pods_SharpSegmentControlSwift_Example-Swift.h"
+}
